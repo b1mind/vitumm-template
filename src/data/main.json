@@ -1,4 +1,4 @@
 {
 	"template": "layouts/main.pug",
-	"navigation": ["index", "vituum"]
+	"navigation": ["test"]
 }

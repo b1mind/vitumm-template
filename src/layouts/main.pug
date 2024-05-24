@@ -1,11 +1,24 @@
 html
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width")
-    title=title
-    link(rel="stylesheet" href="/src/styles/main.scss")
-body
-    include ../components/header.pug
-    h1=title
-    block content
+	meta(charset="utf-8")
+	meta(name="viewport" content="width=device-width")
 
-    include ../components/footer.pug
+	block script
+		//no scripts yet
+
+	block title
+		title=title
+
+	link(rel="stylesheet" href="/src/styles/global.scss")
+	block styles
+		// extra styles
+	
+body
+	include ../components/header.pug
+
+	block heading
+		h1=title
+
+	block content
+		=content
+
+	include ../components/footer.pug
