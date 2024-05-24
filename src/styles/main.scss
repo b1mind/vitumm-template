@@ -1,0 +1,46 @@
+$mediaSml: 600px;
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: system-ui, sans-serif;
+	background-color: #1b1b1b;
+	color: #cacaca;
+}
+
+h1 {
+	color: white;
+}
+
+main {
+	display: grid;
+
+	@media (max-width: $mediaSml) {
+		color: red;
+	}
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr auto;
+
+	@media (max-width: $mediaSml) {
+		grid-template-columns: 1fr;
+	}
+}
+
+nav {
+	display: flex;
+	gap: 10px;
+
+	@media (max-width: $mediaSml) {
+		flex-wrap: wrap;
+	}
+}
