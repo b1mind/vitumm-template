@@ -14,9 +14,6 @@ devDependencies:
   jstransformer-markdown-it:
     specifier: ^3.0.0
     version: 3.0.0
-  markdown-it-front-matter:
-    specifier: ^0.2.4
-    version: 0.2.4
   postcss-combine-media-query:
     specifier: ^1.0.1
     version: 1.0.1
@@ -886,10 +883,6 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
-
-  /markdown-it-front-matter@0.2.4:
-    resolution: {integrity: sha512-25GUs0yjS2hLl8zAemVndeEzThB1p42yxuDEKbd4JlL3jiz+jsm6e56Ya8B0VREOkNxLYB4TTwaoPJ3ElMmW+w==}
     dev: true
 
   /markdown-it@13.0.2:

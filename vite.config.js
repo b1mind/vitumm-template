@@ -20,8 +20,7 @@ export default {
 				markdown: function (text) {
 					const render = markdownIt.render(text, {
 						linkify: true,
-						//fixme fontMatter usage
-						plugins: ['markdown-it-front-matter'],
+						// plugins: ['markdown-it-front-matter'],
 					})
 					return render
 				},
