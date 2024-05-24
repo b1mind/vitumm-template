@@ -1,0 +1,5 @@
+{
+	"title": "Testing Vituum data",
+	"content": "This would just be some content coming from json data",
+	"styles": "/src/styles/test.scss"
+}

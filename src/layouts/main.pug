@@ -1,25 +1,32 @@
 html
 	meta(charset="utf-8")
 	meta(name="viewport" content="width=device-width")
+	meta(name="color-scheme" content="dark light")
+	meta(name="description" content=description)
 
 	block script
-		//no scripts yet
+		// extra scripts
+
+	block styles
+		// extra styles
+
+	link(rel="stylesheet" href="/src/styles/global.scss")
+
+	if (styles)
+		link(rel="stylesheet" href=styles)
 
 	block title
 		title=title
 
-	link(rel="stylesheet" href="/src/styles/global.scss")
-	block styles
-		// extra styles
 	
 body
 	.layout
-		include ../components/header.pug
+		include header.pug
 
 		main
 			block heading
 				h1=title
 			block content
-				=content
+				p=content
 
-		include ../components/footer.pug
+		include footer.pug

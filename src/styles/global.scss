@@ -49,9 +49,14 @@ h1 {
 }
 
 main {
-	grid-column: content;
+	grid-column: full;
 	display: grid;
-	grid-template-rows: auto 1fr;
+	grid-template-columns: inherit;
+	align-content: start;
+
+	& > * {
+		grid-column: content;
+	}
 
 	@media (max-width: $mediaSml) {
 	}

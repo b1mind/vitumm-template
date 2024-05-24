@@ -1,0 +1,18 @@
+extends /layouts/main.pug
+
+block heading
+	h1 About
+block content
+	p Template for quick Pug/Sass templating maybe some gsap or markdown? 
+	p This page is just using pug no Vituum json
+
+	:markdown-it()
+		## Markdown
+		
+		This is some markdown in Pug using 
+		[ jsTransform-markdown-it ]( https://github.com/jstransformers/jstransformer-markdown-it )
+		
+		```js
+			//codeblocks
+			let code = 'not highlighted'
+		```
