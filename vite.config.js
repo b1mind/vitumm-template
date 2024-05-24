@@ -2,7 +2,6 @@ import vituum from 'vituum'
 import pug from '@vituum/vite-plugin-pug'
 import postcss from '@vituum/vite-plugin-postcss'
 import markdownIt from 'jstransformer-markdown-it'
-import markdownItFrontMatter from 'markdown-it-front-matter'
 
 export default {
 	plugins: [
@@ -18,7 +17,7 @@ export default {
 			root: './src',
 			filters: {
 				//custom filters
-				markdown: function (text) {
+				md: function (text) {
 					const md = markdownIt
 
 					const render = md.render(text, {
@@ -32,11 +31,12 @@ export default {
 									)
 
 									//fixme do something with frontMatter data
-									console.dir(result)
+									return result
 								},
 							],
 						],
 					})
+
 					return render
 				},
 				test: function (text) {

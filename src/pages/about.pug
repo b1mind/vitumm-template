@@ -6,13 +6,14 @@ block title
 
 block heading
 	h1= title
+
 block content
-	p Template for quick Pug/Sass templating.
+	p Vituum Template for quick Pug/Sass projects.
 	p This page is just pug and markdown no json data
 
-	:markdown()
+	:md
 		---
-		title: FrontMatter
+		title: some silly title
 		author: b1mind
 		---
 
@@ -28,7 +29,7 @@ block content
 			let code = 'not highlighted'
 		```
 
-	include:markdown ./about.md
+	include:md ./about.md
 
 	h2 Custom 
 	p
