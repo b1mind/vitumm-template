@@ -1,14 +1,13 @@
-extends /layouts/main.pug
+extends /layouts/main
+
+block title
+	title=siteName + ' | ' + title
 
 block heading
 	h1 About
 block content
 	p Template for quick Pug/Sass templating.
 	p This page is just pug and markdown no json data
-
-	p
-		:test
-			custom  
 
 	:markdown()
 		## Markdown
@@ -23,5 +22,11 @@ block content
 			let code = 'not highlighted'
 		```
 
-	include:markdown ../data/about.md
+	include:markdown ./about.md
+
+	h2 Custom 
+	p
+		:test
+			custom filter   
+
 	

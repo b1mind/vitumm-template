@@ -75,20 +75,27 @@ main {
 	}
 }
 
-header {
+.layout > header {
 	grid-column: popout;
 	display: grid;
 	grid-template-columns: 1fr auto;
+	align-items: center;
 	padding-block: var(--gap-md);
+
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.logo {
+		max-width: max-content;
+		display: flex;
+		align-content: center;
+	}
 }
 
-nav {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-}
-
-footer {
+.layout > footer {
 	grid-column: popout;
 	padding-block: var(--gap-md);
 }

@@ -1,6 +1,8 @@
 header
-	a(href="/")
-		img(src="/src/assets/vite.svg" style="max-width: 400px")
+	a.logo(href="/")
+		img(src="/src/assets/vite.svg" width="35px" height="35px")
+		b SassyPug
+
 	nav
 		each link in navigation
 			a(href="/"+link)= link.toUpperCase()
