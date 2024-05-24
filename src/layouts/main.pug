@@ -4,6 +4,7 @@ html
 	meta(name="color-scheme" content="dark light")
 	meta(name="description" content=description)
 
+	script(src="/src/scripts/scripts.js")
 	block script
 		//- extra scripts
 
@@ -16,7 +17,7 @@ html
 		link(rel="stylesheet" href=styles)
 
 	block title
-		title=siteName + ' | ' + title
+		title=siteName + title
 	
 body
 	.layout

@@ -12,6 +12,7 @@
 		"@vituum/vite-plugin-postcss": "^1.1.0",
 		"@vituum/vite-plugin-pug": "^1.1.0",
 		"jstransformer-markdown-it": "^3.0.0",
+		"markdown-it-front-matter": "^0.2.4",
 		"postcss-combine-media-query": "^1.0.1",
 		"sass": "^1.77.2",
 		"vite": "^5.2.0",

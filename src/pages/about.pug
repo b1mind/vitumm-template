@@ -1,15 +1,21 @@
 extends /layouts/main
 
 block title
-	title=siteName + ' | ' + title
+	-let title = 'About'
+	title=siteName + title
 
 block heading
-	h1 About
+	h1= title
 block content
 	p Template for quick Pug/Sass templating.
 	p This page is just pug and markdown no json data
 
 	:markdown()
+		---
+		title: FrontMatter
+		author: b1mind
+		---
+
 		## Markdown
 		
 		https://b.1mind.dev
