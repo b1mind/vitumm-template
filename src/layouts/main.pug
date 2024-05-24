@@ -13,12 +13,13 @@ html
 		// extra styles
 	
 body
-	include ../components/header.pug
+	.layout
+		include ../components/header.pug
 
-	block heading
-		h1=title
+		main
+			block heading
+				h1=title
+			block content
+				=content
 
-	block content
-		=content
-
-	include ../components/footer.pug
+		include ../components/footer.pug

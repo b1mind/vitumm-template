@@ -1,5 +1,14 @@
 $mediaSml: 600px;
 
+:root {
+	--content-max: 57.5rem; //920px;
+	--content-min: 17.5rem; //280px;
+	--gap-lg: 32px;
+	--gap-md: 24px;
+	--gap-sm: 16px;
+	--gap-xs: 8px;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -9,6 +18,7 @@ html {
 }
 
 body {
+	margin: 0;
 	height: 100%;
 	font-family: system-ui, sans-serif;
 	background-color: #1b1b1b;
@@ -19,28 +29,48 @@ h1 {
 	color: white;
 }
 
-main {
+.layout {
+	min-height: 100%;
+	min-height: 100svh;
 	display: grid;
+	grid-template-columns:
+		[full-start]
+		minmax(var(--gap-sm), 1fr)
+		[popout-start]
+		minmax(0, 0.25fr)
+		[content-start]
+		minmax(0, var(--content-max))
+		[content-end]
+		minmax(0, 0.25fr)
+		[popout-end]
+		minmax(var(--gap-sm), 1fr)
+		[full-end];
+	grid-template-rows: auto 1fr auto;
+}
+
+main {
+	grid-column: content;
+	display: grid;
+	grid-template-rows: auto 1fr;
 
 	@media (max-width: $mediaSml) {
-		color: red;
 	}
 }
 
 header {
+	grid-column: popout;
 	display: grid;
 	grid-template-columns: 1fr auto;
-
-	@media (max-width: $mediaSml) {
-		grid-template-columns: 1fr;
-	}
+	padding-block: var(--gap-md);
 }
 
 nav {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 10px;
+}
 
-	@media (max-width: $mediaSml) {
-		flex-wrap: wrap;
-	}
+footer {
+	grid-column: popout;
+	padding-block: var(--gap-md);
 }
