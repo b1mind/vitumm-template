@@ -1,8 +1,9 @@
-$mediaSml: 600px;
+@use 'vars' as v;
 
 :root {
-	--content-max: 57.5rem; //920px;
-	--content-min: 17.5rem; //280px;
+	//- convert to sass vars? meh
+	--content-max: 57.5rem; //- 920px;
+	--content-min: 17.5rem; //- 280px;
 	--gap-lg: 32px;
 	--gap-md: 24px;
 	--gap-sm: 16px;
@@ -25,8 +26,19 @@ body {
 	color: #cacaca;
 }
 
+h1,
+h2,
+h3 {
+	margin-block-end: 0.35em;
+	line-height: 1.1;
+}
+
 h1 {
 	color: white;
+}
+
+p {
+	margin-top: 0;
 }
 
 .layout {
@@ -58,7 +70,8 @@ main {
 		grid-column: content;
 	}
 
-	@media (max-width: $mediaSml) {
+	@media (max-width: v.$mediaSm) {
+		//- just for testing atm
 	}
 }
 

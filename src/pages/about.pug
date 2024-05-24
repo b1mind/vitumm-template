@@ -3,11 +3,17 @@ extends /layouts/main.pug
 block heading
 	h1 About
 block content
-	p Template for quick Pug/Sass templating maybe some gsap or markdown? 
-	p This page is just using pug no Vituum json
+	p Template for quick Pug/Sass templating.
+	p This page is just pug and markdown no json data
 
-	:markdown-it()
+	p
+		:test
+			custom  
+
+	:markdown()
 		## Markdown
+		
+		https://b.1mind.dev
 		
 		This is some markdown in Pug using 
 		[ jsTransform-markdown-it ]( https://github.com/jstransformers/jstransformer-markdown-it )
@@ -16,3 +22,6 @@ block content
 			//codeblocks
 			let code = 'not highlighted'
 		```
+
+	include:markdown ../data/about.md
+	
