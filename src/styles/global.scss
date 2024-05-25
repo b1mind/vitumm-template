@@ -85,6 +85,7 @@ main {
 	nav {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: end;
 		gap: 10px;
 	}
 
@@ -98,4 +99,9 @@ main {
 .layout > footer {
 	grid-column: popout;
 	padding-block: var(--gap-md);
+}
+
+.pugLogo {
+	justify-self: center;
+	max-width: 500px;
 }
