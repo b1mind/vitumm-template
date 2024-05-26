@@ -2,6 +2,7 @@ import vituum from 'vituum'
 import pug from '@vituum/vite-plugin-pug'
 import postcss from '@vituum/vite-plugin-postcss'
 import markdownIt from 'jstransformer-markdown-it'
+import fs from 'fs'
 
 export default {
 	plugins: [
@@ -31,7 +32,12 @@ export default {
 									)
 
 									//fixme do something with frontMatter data
-									return result
+									//has to be viewed to generate the json... generates in build time after pug
+									if (result.slug) {
+										let dataSrc = `./src/data/${result.slug}.json`
+										let newData = JSON.stringify(result)
+										fs.writeFileSync(dataSrc, newData)
+									}
 								},
 							],
 						],
