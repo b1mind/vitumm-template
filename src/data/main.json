@@ -1,6 +1,5 @@
 {
 	"template": "layouts/main.pug",
 	"siteName": "SassyPug | ",
-	"description": "Sass + Pug template",
 	"navigation": ["vituum", "about"]
 }

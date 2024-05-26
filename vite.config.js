@@ -20,7 +20,6 @@ export default {
 				//custom filters
 				md: function (text) {
 					const md = markdownIt
-
 					const render = md.render(text, {
 						linkify: true,
 						plugins: [
@@ -33,11 +32,14 @@ export default {
 
 									//fixme do something with frontMatter data
 									//has to be viewed to generate the json... generates in build time after pug
-									if (result.slug) {
-										let dataSrc = `./src/data/${result.slug}.json`
-										let newData = JSON.stringify(result)
-										fs.writeFileSync(dataSrc, newData)
-									}
+									// if (result.slug) {
+									// 	let dataSrc = `./src/data/${result.slug}.json`
+									// 	let newData = JSON.stringify(result)
+									// 	fs.writeFileSync(dataSrc, newData)
+									// }
+
+									//where does this even return too?
+									return result
 								},
 							],
 						],
