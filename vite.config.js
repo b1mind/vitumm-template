@@ -6,6 +6,11 @@ import markdownIt from 'jstransformer-markdown-it'
 // import fs from 'fs'
 
 export default {
+	build: {
+		rollupOptions: {
+			input: ['./src/pages/**/*.html'],
+		},
+	},
 	plugins: [
 		vituum({
 			imports: {
