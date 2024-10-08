@@ -7,7 +7,6 @@ import fs from 'fs'
 
 export default {
 	plugins: [
-		trailingSlashPlugin({ mode: 'always' }),
 		vituum({
 			imports: {
 				filenamePattern: {
