@@ -59,7 +59,8 @@ export default {
 		rollupOptions: {
 			input: {
 				main: resolve(__dirname, 'index.html'),
-				nested: resolve(__dirname, 'nested/index.html'),
+				about: resolve(__dirname, 'about/index.html'),
+				vituum: resolve(__dirname, 'vituum/index.html'),
 			},
 		},
 	},
