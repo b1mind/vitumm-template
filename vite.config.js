@@ -2,10 +2,12 @@ import vituum from 'vituum'
 import pug from '@vituum/vite-plugin-pug'
 import postcss from '@vituum/vite-plugin-postcss'
 import markdownIt from 'jstransformer-markdown-it'
+import trailingSlashPlugin from './trailingSlashPlugin'
 import fs from 'fs'
 
 export default {
 	plugins: [
+		trailingSlashPlugin({ mode: 'always' }),
 		vituum({
 			imports: {
 				filenamePattern: {
