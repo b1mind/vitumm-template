@@ -2,15 +2,9 @@ import vituum from 'vituum'
 import pug from '@vituum/vite-plugin-pug'
 import postcss from '@vituum/vite-plugin-postcss'
 import markdownIt from 'jstransformer-markdown-it'
-// import { resolve } from 'path'
 // import fs from 'fs'
 
 export default {
-	build: {
-		rollupOptions: {
-			input: ['./src/pages/**/*.html'],
-		},
-	},
 	plugins: [
 		vituum({
 			imports: {
@@ -60,4 +54,10 @@ export default {
 		}),
 		postcss(),
 	],
+	// fixme output needs to be dir/index.html
+	// build: {
+	// 	rollupOptions: {
+	// 		input: ['./src/pages/**/*.html'],
+	// 	},
+	// },
 }
